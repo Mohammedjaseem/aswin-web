@@ -28,22 +28,16 @@ class SpaceShip {
         this.headY = this.posY + Math.sin(this.angle) * this.radius
 
         triangle(
-            this.ctx,
-            [this.headX, this.headY], 
-            [this.posX + Math.cos(this.angle - radians(135)) * (this.radius + this.radius * 0.45), this.posY + Math.sin(this.angle - radians(135)) * (this.radius + this.radius * 0.45)],
-            [this.posX + Math.cos(this.angle - radians(225)) * (this.radius + this.radius * 0.45), this.posY + Math.sin(this.angle - radians(225)) * (this.radius + this.radius * 0.45)],
+            this.ctx, [this.headX, this.headY], [this.posX + Math.cos(this.angle - radians(135)) * (this.radius + this.radius * 0.45), this.posY + Math.sin(this.angle - radians(135)) * (this.radius + this.radius * 0.45)], [this.posX + Math.cos(this.angle - radians(225)) * (this.radius + this.radius * 0.45), this.posY + Math.sin(this.angle - radians(225)) * (this.radius + this.radius * 0.45)],
             true
         )
-        
+
         triangle(
-            this.ctx,
-            [this.posX + Math.cos(this.angle) * this.radius, this.posY + Math.sin(this.angle) * this.radius], 
-            [this.posX + Math.cos(this.angle - radians(135)) * (this.radius * 0.5), this.posY + Math.sin(this.angle - radians(135)) * (this.radius * 0.5)],
-            [this.posX + Math.cos(this.angle - radians(225)) * (this.radius * 0.5), this.posY + Math.sin(this.angle - radians(225)) * (this.radius * 0.5)],
+            this.ctx, [this.posX + Math.cos(this.angle) * this.radius, this.posY + Math.sin(this.angle) * this.radius], [this.posX + Math.cos(this.angle - radians(135)) * (this.radius * 0.5), this.posY + Math.sin(this.angle - radians(135)) * (this.radius * 0.5)], [this.posX + Math.cos(this.angle - radians(225)) * (this.radius * 0.5), this.posY + Math.sin(this.angle - radians(225)) * (this.radius * 0.5)],
             false
         )
 
-        for (let i = 0; i < this.laser.length; i++ ) {
+        for (let i = 0; i < this.laser.length; i++) {
             this.laser[i].show()
         }
     }
@@ -67,10 +61,10 @@ class SpaceShip {
             this.posY = this.canvasHeight
         }
 
-        for (let i = 0; i < this.laser.length; i++ ) {
+        for (let i = 0; i < this.laser.length; i++) {
             this.laser[i].update()
             if (
-                this.laser[i].posX < 0 || 
+                this.laser[i].posX < 0 ||
                 this.laser[i].posX > this.canvasWidth ||
                 this.laser[i].posY < 0 ||
                 this.laser[i].posY > this.canvasHeight
@@ -83,13 +77,13 @@ class SpaceShip {
     thrust() {
         this.velX += Math.cos(this.angle) * 1
         this.velY += Math.sin(this.angle) * 1
-	}
+    }
 
-	turnLeft() {
+    turnLeft() {
         this.angle -= radians(6)
-	}
+    }
 
-	turnRight() {
+    turnRight() {
         this.angle += radians(6)
     }
 

@@ -2,7 +2,7 @@ function getRandomArbitrary(min, max) {
     return Math.random() * (max - min + 0.1) + min;
 }
 
-function getRandomIntFromInterval(min, max) { 
+function getRandomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
@@ -40,7 +40,7 @@ function getDimensions(pos, angle, radius) {
     return [pos[0] + Math.cos(angle) * radius, pos[1] + Math.sin(angle) * radius]
 }
 
-function distance(x1, y1, x2, y2){
+function distance(x1, y1, x2, y2) {
     let a = Math.abs(x1 - x2);
     let b = Math.abs(y1 - y2);
     return Math.sqrt(a * a + b * b);

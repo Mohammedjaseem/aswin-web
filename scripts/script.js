@@ -45,7 +45,7 @@ window.onload = function() {
     }))
 
     contactTypes[2].addEventListener('click', (e => {
-        openHyperLink("https://www.youtube.com/channel/UC64GIql8xII3fDTF1GVtEWA")
+        openHyperLink("https://www.youtube.com/channel/UCnmXA9inncBTo2TDvIVmE6Q")
     }))
 
     function openHyperLink(link) {
